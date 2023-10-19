@@ -28,7 +28,7 @@
             <td colspan="2">
                 <h2>Witaj na mojej stronie o piłce nożnej!</h2>
                 <div class="image-container">
-                    <img id='animacjaTestowa2' src="./img/pilka1.jpg" alt="pilka1">
+                    <img src="./img/pilka1.jpg" alt="pilka1">
                     <img src="./img/pilka2.jpg" alt="pilka2">
                     <img src="./img/pilka3.jpg" alt="pilka3">
                 </div>
@@ -40,7 +40,7 @@
     <table>
     <table>
         <tr>
-            <th colspan="2">Kontakt</th>
+            <th colspan="2">Skrypty</th>
         </tr>
         <tr>
             <td>
@@ -77,16 +77,16 @@
         });
 
         $("#animacjaTestowa2").on({
-            "mouseover": function() {
+            "mouseover" : function(){
                 $(this).animate({
                     width: 300
                 }, 800);
             },
-            "mouseout" : function() {
+            "mouseout" : function(){
                 $(this).animate({
                     width: 200
-                }, 800)
-            }
+                }, 800);
+            } 
         });
 
         $("#animacjaTestowa3").on("click", function(){
