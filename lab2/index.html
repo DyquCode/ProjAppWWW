@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="Author" content="Bartłomiej Dyk" />
+    <title>Moje hobby to piłka nożna</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="kolorujtlo.js" type="text/javascript"></script>
+    <script src="timedate.js" type="text/javascript"></script>
+    </style>
+</head>
+<body onload= "startClock()">
+    <div class="menu">
+        <div id="zegarek"></div>
+        <div id="data"></div>
+        <h1>Moje hobby to piłka nożna</h1>
+        <a href="index.html">Strona główna</a>
+        <a href="historia.html">Historia</a>
+        <a href="wspolczesne_zasady.html">Współczesne zasady</a>
+        <a href="zawodnicy.html">Zawodnicy</a>
+        <a href="turnieje_miedzynarodowe.html">Turnieje międzynarodowe</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="kontakt.html">Kontakt</a>
+    </div>
+    <table>
+        <tr>
+            <td colspan="2">
+                <h2>Witaj na mojej stronie o piłce nożnej!</h2>
+                <div class="image-container">
+                    <img src="./img/pilka1.jpg" alt="pilka1">
+                    <img src="./img/pilka2.jpg" alt="pilka2">
+                    <img src="./img/pilka3.jpg" alt="pilka3">
+                </div>
+                <p>To jest moja strona poświęcona mojemu ulubionemu hobby - piłce nożnej. Znajdziesz tutaj wiele informacji o historii piłki nożnej, jej znanych zawodnikach, a także galerię zdjęć.</p>
+                <p>Jeśli masz pytania lub chciałbyś się ze mną skontaktować, skorzystaj z <a href="kontakt.html">formularza kontaktowego</a></p>
+            </td>
+        </tr>
+    </table>
+    <table>
+    <table>
+        <tr>
+            <th colspan="2">Kontakt</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="contact-form">
+                    <FORM METHOD="POST" NAME="background">
+                        <INPUT TYPE="button" VALUE="żółty" ONCLICK="changeBackground('#FFF000')">
+                        <INPUT TYPE="button" VALUE="czarny" ONCLICK="changeBackground('#000000')">
+                        <INPUT TYPE="button" VALUE="biały" ONCLICK="changeBackground('#FFFFFF')">
+                        <INPUT TYPE="button" VALUE="zielony" ONCLICK="changeBackground('#00FF00')">
+                        <INPUT TYPE="button" VALUE="niebieski" ONCLICK="changeBackground('#0000FF')">
+                        <INPUT TYPE="button" VALUE="pomaranczowy" ONCLICK="changeBackground('#FF8000')">
+                        <INPUT TYPE="button" VALUE="szary" ONCLICK="changeBackground('#c0c0c0')">
+                        <INPUT TYPE="button" VALUE="czerwony" ONCLICK="changeBackground('#FF0000')">
+                    </FORM>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
