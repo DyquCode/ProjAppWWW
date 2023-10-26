@@ -55,21 +55,29 @@
 
 
     echo '<br/><br/>Typy zmiennych $_GET, $_POST, $_SESSION<br/>';
-    echo "Przykład \$_GET:<br/>";
-    $name = $_GET['name'];
-    if (empty($name)) {
-        echo 'Name is empty';
-    } else {
-        echo $name;
-    }
-    echo "<br/><br/>Przykład \$_POST:<br/>";
-    $name = $_POST['name'];
-    if (empty($name)) {
-        echo 'Name is empty';
-    } else {
-        echo $name;
-    }
+    echo 'Przykład $_GET:<br/>';
+    if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+        $name = $_POST['name'];
+        if (empty($name)) {
+          echo 'Nazwa jest pusta';
+        } else {
+          echo 'Nazwa: '.$name;
+        }
+      }
 
-    echo "<br/><br/>Przykład \$_SESSION:<br/>";
-    echo "Zmienna sesji favcolor: " . $_SESSION["favcolor"];
+    echo '<br/><br/>Przykład $_POST:<br/>';
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $name = $_POST['name'];
+        if (empty($name)) {
+            echo 'Nazwa jest pusta';
+          } else {
+            echo 'Nazwa: '.$name;
+          }
+      }
+
+    echo '<br/><br/>Przykład $_SESSION:<br/>';
+    $_SESSION['favcolor'] = 'green';
+    $_SESSION['favanimal'] = 'cat';
+    echo 'Zmienna sesji favcolor: ' . $_SESSION['favcolor'];
+    echo '<br/>Zmienna sesji favanimal: ' . $_SESSION['favanimal'];
 ?>
