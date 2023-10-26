@@ -56,24 +56,12 @@
 
     echo '<br/><br/>Typy zmiennych $_GET, $_POST, $_SESSION<br/>';
     echo 'Przykład $_GET:<br/>';
-    if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        $name = $_POST['name'];
-        if (empty($name)) {
-          echo 'Nazwa jest pusta';
-        } else {
-          echo 'Nazwa: '.$name;
-        }
-      }
+    $_GET['name'] = 'ccccc';
+    echo '_GET ' .$_GET['name'];
 
+    $_POST['nazwa']='Abc';
     echo '<br/><br/>Przykład $_POST:<br/>';
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $name = $_POST['name'];
-        if (empty($name)) {
-            echo 'Nazwa jest pusta';
-          } else {
-            echo 'Nazwa: '.$name;
-          }
-      }
+    echo '_POST ' .$_POST['nazwa'];
 
     echo '<br/><br/>Przykład $_SESSION:<br/>';
     $_SESSION['favcolor'] = 'green';
