@@ -31,6 +31,7 @@ $include('cfg.php')
                 exit;
             } else {
                 echo 'Błąd logowania. Spróbuj ponownie.';
+                echo $this->FormularzLogowania();
             }
         }
     }
@@ -40,7 +41,8 @@ $include('cfg.php')
         if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
             echo 'Jesteś zalogowany.';
         } else {
-            $this->FormularzLogowania();
+            echo 'Brak dostępu. Zaloguj się, aby uzyskać dostęp.';
+            echo $this->FormularzLogowania();
         }
     }
 
