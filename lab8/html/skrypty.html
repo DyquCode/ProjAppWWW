@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="Author" content="Bartłomiej Dyk" />
+    <title>Moje hobby to piłka nożna</title>
+    <link rel="stylesheet" href="./../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/kolorujtlo.js"></script>
+</head>
+<body>
+    <div id="animacjaTestowa1" class="test-block">Kliknij, a się powiększe</div>
+    <br>
+    <div id="animacjaTestowa2" class="test-block">Najedź kursorem, a się powiększe</div>
+    <br>
+    <div id="animacjaTestowa3" class="test-block">Kliknij, abym urósł</div>
+
+    <script>
+        $("#animacjaTestowa1").on("click", function(){
+            $(this).animate({
+                width: "500px",
+                opacity: 0.4,
+                fontsize: "3em",
+                borderwidth: "10px"
+            }, 1500)
+        });
+    
+        $("#animacjaTestowa2").on({
+            "mouseover" : function(){
+                $(this).animate({
+                    width: 300
+                }, 800);
+            },
+            "mouseout" : function(){
+                $(this).animate({
+                    width: 200
+                }, 800);
+            } 
+        });
+    
+        $("#animacjaTestowa3").on("click", function(){
+            if (!$(this).is(":animated")){
+                $(this).animate({
+                    width: "+=" + 50,
+                    height: "+=" + 10,
+                    opacity: "-=" + 0.1,
+                    duration: 3000
+                });
+            }
+        });
+    
+    </script>
+        <table>
+            <tr>
+                <th colspan="2">Skrypty JS</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="contact-form">
+                        <FORM METHOD="POST" NAME="background">
+                            <INPUT TYPE="button" VALUE="żółty" ONCLICK="changeBackground('#FFF000')">
+                            <INPUT TYPE="button" VALUE="czarny" ONCLICK="changeBackground('#000000')">
+                            <INPUT TYPE="button" VALUE="biały" ONCLICK="changeBackground('#FFFFFF')">
+                            <INPUT TYPE="button" VALUE="zielony" ONCLICK="changeBackground('#00FF00')">
+                            <INPUT TYPE="button" VALUE="niebieski" ONCLICK="changeBackground('#0000FF')">
+                            <INPUT TYPE="button" VALUE="pomaranczowy" ONCLICK="changeBackground('#FF8000')">
+                            <INPUT TYPE="button" VALUE="szary" ONCLICK="changeBackground('#c0c0c0')">
+                            <INPUT TYPE="button" VALUE="czerwony" ONCLICK="changeBackground('#FF0000')">
+                        </FORM>
+                    </div>
+                </td>
+            </tr>
+        </table>
+</body>
+</html>
