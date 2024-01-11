@@ -20,7 +20,6 @@ PokazKoszyk();
 
 // Funkcja dodająca produkt do koszyka
 function DodajDoKoszyka($product_id, $quantity, $net_price, $vat_rate) {
-    // Rozpocznij sesję, jeśli nie została jeszcze rozpoczęta
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
     }
@@ -55,7 +54,6 @@ function UsunZKoszyka($product_id) {
         unset($_SESSION['basket'][$product_id]);
 
         if (empty($_SESSION['basket'])) {
-            // Koszyk jest teraz pusty
             echo 'Produkt został usunięty z koszyka. Koszyk jest pusty.';
             header('Location: sklep.php');
         } else {

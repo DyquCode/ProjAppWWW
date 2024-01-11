@@ -30,7 +30,8 @@ if (isset($_POST['action'])) {
                     'vat_rate' => isset($_POST['vat_rate']) ? $_POST['vat_rate'] : '',
                     'available_quantity' => isset($_POST['available_quantity']) ? $_POST['available_quantity'] : '',
                     'availability_status' => isset($_POST['availability_status']) ? 1 : 0,
-                    'category' => isset($_POST['category']) ? $_POST['category'] : '',                        'dimensions' => isset($_POST['dimensions']) ? $_POST['dimensions'] : '',
+                    'category' => isset($_POST['category']) ? $_POST['category'] : '',                        
+                    'dimensions' => isset($_POST['dimensions']) ? $_POST['dimensions'] : '',
                     'image_url' => isset($_POST['image_url']) ? $_POST['image_url'] : '',
                     );
             

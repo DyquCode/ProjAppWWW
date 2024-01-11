@@ -88,22 +88,22 @@ if (isset($_POST['action'])) {
         if ($editPage) {
     ?>
             <form action="podstrony.php" method="post">
-    <input type="hidden" name="action" value="editPage">
+                <input type="hidden" name="action" value="editPage">
 
-    <label for="id">ID:</label>
-    <input type="hidden" name="id" readonly value="<?php echo $editPage['id']; ?>">
+                <label for="id">ID:</label>
+                <input type="hidden" name="id" readonly value="<?php echo $editPage['id']; ?>">
 
-    <label for="title">Tytuł:</label>
-<input type="text" name="title" required value="<?php echo isset($editPage['page_title']) ? htmlspecialchars($editPage['page_title'], ENT_QUOTES, 'UTF-8') : ''; ?>">
+                <label for="title">Tytuł:</label>
+                <input type="text" name="title" required value="<?php echo isset($editPage['page_title']) ? htmlspecialchars($editPage['page_title'], ENT_QUOTES, 'UTF-8') : ''; ?>">
 
-    <label for="content">Treść:</label>
-    <textarea name="content"><?php echo isset($editPage['page_content']) ? htmlspecialchars($editPage['page_content'], ENT_QUOTES, 'UTF-8') : ''; ?></textarea>
+                <label for="content">Treść:</label>
+                <textarea name="content"><?php echo isset($editPage['page_content']) ? htmlspecialchars($editPage['page_content'], ENT_QUOTES, 'UTF-8') : ''; ?></textarea>
 
-    <label for="status">Status:</label>
-    <input type="checkbox" name="status" <?php echo ($editPage['status'] == 1) ? 'checked' : ''; ?>>
+                <label for="status">Status:</label>
+                <input type="checkbox" name="status" <?php echo ($editPage['status'] == 1) ? 'checked' : ''; ?>>
 
-    <input type="submit" value="Zapisz Zmiany">
-</form>
+                <input type="submit" value="Zapisz Zmiany">
+            </form>
     <?php
         } else {
             echo 'Podstrona o podanym ID nie istnieje.';
