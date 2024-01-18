@@ -20,6 +20,7 @@ function PokazProdukty() {
                     <th>Cena Netto</th>
                     <th>Ilość Dostępnych Sztuk</th>
                     <th>Status Dostępności</th>
+                    <th>Obraz</th>
                     <th>Kategoria</th>';
 
         // Wyświetlanie przycisków tylko w zakładce "Produkty"
@@ -37,6 +38,7 @@ function PokazProdukty() {
                     <td>' . $row['net_price'] . '</td>
                     <td>' . $row['available_quantity'] . '</td>
                     <td>' . ($row['availability_status'] ? 'Dostępny' : 'Niedostępny') . '</td>
+                    <td><img src="' . $row['image_url'] . '" alt="Product Image" style="max-width: 100px; max-height: 100px;"></td>
                     <td>' . $row['category'] . '</td>';
 
             // Wyświetlanie przycisków tylko w zakładce "Produkty"
